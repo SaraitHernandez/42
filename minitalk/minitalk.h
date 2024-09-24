@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
+/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 18:50:51 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/21 18:50:54 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/24 12:32:23 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-/* Function prototypes */
 void	ft_putnbr(int n);
 void	ft_putstr(char *str);
 int		ft_atoi(const char *str);

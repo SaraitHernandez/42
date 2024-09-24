@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
+/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 16:03:01 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/21 17:15:09 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/24 12:21:55 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	send_char(int pid, char c)
 			}
 		}
 		bit++;
-		usleep(100);
+		usleep(400);
 	}
 }
 
@@ -66,6 +66,7 @@ int	main(int argc, char **argv)
 		send_char(pid, message[i]);
 		i++;
 	}
+	send_char(pid, '\n');
 	send_char(pid, '\0');
 	return (0);
 }

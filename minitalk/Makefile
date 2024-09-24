@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+         #
+#    By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/01 12:21:24 by sarherna          #+#    #+#              #
-#    Updated: 2024/09/21 16:51:38 by sarherna         ###   ########.fr        #
+#    Updated: 2024/09/24 12:27:48 by sarherna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
