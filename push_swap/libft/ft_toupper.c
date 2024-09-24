@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 10:56:40 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/23 11:44:48 by sarherna         ###   ########.fr       */
+/*   Created: 2024/03/18 16:55:41 by sarherna          #+#    #+#             */
+/*   Updated: 2024/03/19 09:54:17 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	error(void)
+int	ft_toupper(int c)
 {
-	write(2, "Error\n", 6);
-	exit(EXIT_FAILURE);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

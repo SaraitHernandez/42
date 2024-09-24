@@ -1,19 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sarherna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 10:56:40 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/23 11:44:48 by sarherna         ###   ########.fr       */
+/*   Created: 2024/02/28 18:25:04 by sarherna          #+#    #+#             */
+/*   Updated: 2024/02/28 18:26:06 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	error(void)
+int	ft_isalpha(int c)
 {
-	write(2, "Error\n", 6);
-	exit(EXIT_FAILURE);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

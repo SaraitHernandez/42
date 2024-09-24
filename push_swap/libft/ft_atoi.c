@@ -1,16 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_aux_ft.c                                     :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 09:25:41 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/23 12:30:31 by sarherna         ###   ########.fr       */
+/*   Created: 2024/03/18 18:23:54 by sarherna          #+#    #+#             */
+/*   Updated: 2024/03/19 10:11:36 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "push_swap.h"
 
 static int	ft_isspace(int c)
 {
@@ -18,30 +16,10 @@ static int	ft_isspace(int c)
 		|| c == '\v' || c == '\f' || c == '\r');
 }
 
-int	is_numeric(const char *str)
+int	ft_atoi(const char *str)
 {
-	int	i;
-
-	i = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	if (str[i] == '\0')
-		return (0);
-	while (str[i])
-	{
-		if (str[i] < '0' || str[i] > '9')
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int	stack_atoi(const char *str, t_stack *stack)
-{
-	int		sign;
-	long	result;
+	int	sign;
+	int	result;
 
 	sign = 1;
 	result = 0;
@@ -56,23 +34,7 @@ int	stack_atoi(const char *str, t_stack *stack)
 	while (*str >= '0' && *str <= '9')
 	{
 		result = result * 10 + (*str - '0');
-		if ((sign == -1 && (-result) < -2147483648)
-			|| (sign == 1 && result > 2147483647))
-		{
-			destroy_stack(stack);
-			error();
-		}
 		str++;
 	}
-	return ((int)(sign * result));
-}
-
-int	parse_int(const char *str, t_stack *stack)
-{
-	if (!is_numeric(str))
-	{
-		destroy_stack(stack);
-		error();
-	}
-	return (stack_atoi(str, stack));
+	return (sign * result);
 }

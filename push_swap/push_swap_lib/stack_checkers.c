@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_checkers.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
+/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 09:29:43 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/19 11:01:17 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/23 11:03:16 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

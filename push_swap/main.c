@@ -3,15 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
+/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 09:25:02 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/19 13:27:24 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/23 16:03:31 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_lib/push_swap.h"
+/*
+#include <stdio.h>
 
+void	display_stack(t_stack *stack)
+{
+	t_node	*current;
+
+	current = stack->head;
+	while (current != NULL)
+	{
+		printf("%d ", current->data);
+		current = current->next;
+	}
+	printf("\n");
+}
+*/
 static void	handle_four_elements(t_stack *stack_a)
 {
 	t_stack	*stack_b;
@@ -29,15 +44,45 @@ static void	handle_four_elements(t_stack *stack_a)
 	destroy_stack(stack_b);
 }
 
-static void	process_input(t_stack *stack_a, int argc, char *argv[])
+void	free_split(char **arg)
 {
 	int	i;
 
-	i = 1;
-	while (i < argc)
+	i = 0;
+	while (arg[i] != NULL)
 	{
-		push(stack_a, parse_int(argv[i], stack_a));
+		free(arg[i]);
 		i++;
+	}
+	free(arg);
+}
+
+static void	process_input(t_stack *stack_a, int argc, char *argv[])
+{
+	int		i;
+	char	**arg;
+
+	if (argc == 2)
+	{
+		arg = ft_split(argv[1], ' ');
+		if (!arg)
+			error();
+		i = 0;
+		while (arg[i] != NULL)
+		{
+			push(stack_a, parse_int(arg[i], stack_a));
+			i++;
+		}
+		free_split(arg);
+	}
+	else
+	{
+		i = 1;
+		while (i < argc)
+		{
+			push(stack_a, parse_int(argv[i], stack_a));
+			i++;
+		}
 	}
 }
 

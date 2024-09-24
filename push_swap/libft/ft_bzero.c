@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 10:56:40 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/23 11:44:48 by sarherna         ###   ########.fr       */
+/*   Created: 2024/02/29 17:55:15 by sarherna          #+#    #+#             */
+/*   Updated: 2024/03/19 09:46:59 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	error(void)
+void	ft_bzero(void *s, size_t n)
 {
-	write(2, "Error\n", 6);
-	exit(EXIT_FAILURE);
+	unsigned char	*str;
+	size_t			i;
+
+	str = (unsigned char *) s;
+	i = 0;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
 }

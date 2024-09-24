@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
+/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 09:25:32 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/19 11:00:59 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/23 11:32:05 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,29 +51,11 @@ void	push(t_stack *stack, int data)
 	}
 }
 
-void	display_stack(t_stack *stack)
-{
-	t_node	*current;
-
-	current = stack->head;
-	while (current != NULL)
-	{
-		printf("%d ", current->data);
-		current = current->next;
-	}
-	printf("\n");
-}
-
 int	pop(t_stack *stack)
 {
 	t_node	*temp;
 	int		data;
 
-	if (is_empty(stack))
-	{
-		destroy_stack(stack);
-		error();
-	}
 	temp = stack->head;
 	data = temp->data;
 	if (stack->head == stack->tail)

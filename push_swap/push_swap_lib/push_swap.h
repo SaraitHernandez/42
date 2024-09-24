@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
+/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 09:25:47 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/19 13:54:20 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/23 15:40:05 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
+# include "../libft/libft.h"
 
 typedef struct s_node
 {
@@ -39,7 +39,6 @@ typedef struct s_costs
 
 void	error(void);
 int		parse_int(const char *str, t_stack *stack);
-int		ft_atoi(const char *str, t_stack *stack);
 t_stack	*create_stack(void);
 int		is_empty(t_stack *stack);
 void	check_duplicates(t_stack *stack, int data);

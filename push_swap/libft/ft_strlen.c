@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 10:56:40 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/23 11:44:48 by sarherna         ###   ########.fr       */
+/*   Created: 2024/02/28 18:38:32 by sarherna          #+#    #+#             */
+/*   Updated: 2024/03/19 09:46:11 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	error(void)
+size_t	ft_strlen(const char *s)
 {
-	write(2, "Error\n", 6);
-	exit(EXIT_FAILURE);
+	size_t	length;
+
+	length = 0;
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
+	return (length);
 }

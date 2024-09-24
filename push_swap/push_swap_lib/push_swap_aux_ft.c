@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_aux_ft.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
+/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 09:25:56 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/19 12:19:17 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/23 11:03:07 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

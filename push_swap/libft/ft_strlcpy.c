@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 10:56:40 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/23 11:44:48 by sarherna         ###   ########.fr       */
+/*   Created: 2024/03/07 13:18:22 by sarherna          #+#    #+#             */
+/*   Updated: 2024/05/16 17:02:22 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	error(void)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {
-	write(2, "Error\n", 6);
-	exit(EXIT_FAILURE);
+	size_t	src_len;
+
+	src_len = ft_strlen(src);
+	if (src_len + 1 < dst_size)
+		ft_memcpy(dst, src, src_len + 1);
+	else if (dst_size > 0)
+	{
+		ft_memcpy(dst, src, dst_size - 1);
+		dst[dst_size - 1] = '\0';
+	}
+	return (src_len);
 }

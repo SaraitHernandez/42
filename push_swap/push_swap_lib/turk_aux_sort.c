@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   turk_aux_sort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
+/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 13:21:49 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/19 13:55:50 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/23 11:03:21 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
