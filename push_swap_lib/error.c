@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/18 17:49:20 by sarherna          #+#    #+#             */
-/*   Updated: 2024/05/17 10:27:13 by sarherna         ###   ########.fr       */
+/*   Created: 2024/09/19 10:56:40 by sarherna          #+#    #+#             */
+/*   Updated: 2024/09/26 11:27:16 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	error(t_stack *stack_a, char **split_arg)
 {
-	size_t	i;
-
-	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
-	{
-		if ((unsigned char)s1[i] != (unsigned char)s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
-	}
-	return (0);
+	if (stack_a != NULL)
+		destroy_stack(stack_a);
+	if (split_arg != NULL)
+		free_split(split_arg);
+	write(2, "Error\n", 6);
+	exit(EXIT_FAILURE);
 }

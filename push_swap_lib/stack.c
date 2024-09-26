@@ -6,7 +6,7 @@
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 09:25:32 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/23 11:32:05 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/26 11:00:05 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_stack	*create_stack(void)
 
 	stack = (t_stack *)malloc(sizeof(t_stack));
 	if (!stack)
-		error();
+		error(NULL, NULL);
 	stack->head = NULL;
 	stack->tail = NULL;
 	return (stack);
@@ -31,10 +31,7 @@ void	push(t_stack *stack, int data)
 	check_duplicates(stack, data);
 	new_node = (t_node *)malloc(sizeof(t_node));
 	if (!new_node)
-	{
-		destroy_stack(stack);
-		error();
-	}
+		error(stack, NULL);
 	new_node->data = data;
 	new_node->next = NULL;
 	new_node->prev = NULL;

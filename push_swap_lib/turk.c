@@ -6,7 +6,7 @@
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 09:25:17 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/23 11:03:24 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:54:08 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,23 +52,6 @@ void	execute_moves(t_stack *stack_a, t_stack *stack_b, int i_a, int i_b)
 	}
 }
 
-void	min_sort(t_stack *stack_a, int size)
-{
-	int	a;
-	int	b;
-	int	c;
-
-	a = stack_a->head->data;
-	b = stack_a->head->next->data;
-	if (size == 2)
-		sort_two(stack_a, a, b);
-	else
-	{
-		c = stack_a->tail->data;
-		sort_three(stack_a, a, b, c);
-	}
-}
-
 void	move_stack_a(t_stack *stack_a, int position)
 {
 	int	size;
@@ -101,4 +84,21 @@ void	final_rotate(t_stack *stack_a)
 
 	position = get_min_position(stack_a);
 	move_stack_a(stack_a, position);
+}
+
+void	min_sort(t_stack *stack_a, int size)
+{
+	int	a;
+	int	b;
+	int	c;
+
+	a = stack_a->head->data;
+	b = stack_a->head->next->data;
+	if (size == 2)
+		sort_two(stack_a, a, b);
+	else
+	{
+		c = stack_a->tail->data;
+		sort_three(stack_a, a, b, c);
+	}
 }

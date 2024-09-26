@@ -6,7 +6,7 @@
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 09:25:47 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/23 15:40:05 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/26 11:29:08 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ typedef struct s_costs
 	int	*index_b;
 }	t_costs;
 
-void	error(void);
-int		parse_int(const char *str, t_stack *stack);
+void	error(t_stack *stack_a, char **split_arg);
+int		parse_int(const char *str, t_stack *stack, char **split_arg);
 t_stack	*create_stack(void);
 int		is_empty(t_stack *stack);
 void	check_duplicates(t_stack *stack, int data);
@@ -76,5 +76,7 @@ int		is_sorted(t_stack *stack);
 int		get_max(t_stack *stack);
 int		get_min(t_stack *stack);
 int		get_target_position(t_stack *stack_b, int value);
+void	free_split(char **arg);
+void	sort_four(t_stack *stack_a);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 10:29:10 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/23 11:03:11 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:59:17 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,7 @@ void	move_elements_to_stack_b(t_stack *stack_a, t_stack *stack_b)
 		costs.costs_b = (int *)malloc(size_a * sizeof(int));
 		costs.index_b = (int *)malloc(size_a * sizeof(int));
 		if (!costs.costs_a || !costs.costs_b || !costs.index_b)
-		{
-			destroy_stack(stack_a);
-			error();
-		}
+			error(stack_a, NULL);
 		calculate_costs(stack_a, stack_b, &costs);
 		index = find_cheapest_element(stack_a, costs.costs_a, costs.costs_b);
 		execute_moves(stack_a, stack_b, index, costs.index_b[index]);
