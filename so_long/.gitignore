@@ -2,3 +2,9 @@ mlx_linux
 obj
 so_long
 .vscode
+*.o
+*.a
+lib/libft/*.o
+lib/libft/*.a
+lib/ft_printf/*.a
+lib/ft_printf/*.o
