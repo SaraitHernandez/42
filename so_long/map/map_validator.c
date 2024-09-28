@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   map_validator.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:08:29 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/26 17:35:33 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/28 17:49:54 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "map_validator.h"
+#include "map.h"
 
 int	is_valid_map(t_map *map)
 {

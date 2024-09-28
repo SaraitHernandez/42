@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   path_validator.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 16:40:26 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/26 15:46:43 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/28 17:49:24 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "map_validator.h"
+#include "map.h"
 
 int	has_valid_path(t_map *map)
 {

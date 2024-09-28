@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 16:15:37 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/26 17:37:22 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/09/28 17:54:17 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlen(const char *s)
 	length = 0;
 	while (*s != '\0')
 	{
-		write(1, &*s, 1);
+		//write(1, &*s, 1);
 		length++;
 		s++;
 	}

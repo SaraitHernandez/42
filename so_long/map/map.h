@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_validator.h                                    :+:      :+:    :+:   */
+/*   map.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,11 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAP_VALIDATOR_H
-# define MAP_VALIDATOR_H
+#ifndef MAP_H
+# define MAP_H
 
-#include <stdlib.h>
-#include <stdio.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include "../lib/ft_printf/ft_printf.h"
+# include "../lib/get_next_line/get_next_line.h"
+# include "../lib/ft_printf/ft_printf.h"
 
 typedef struct s_map
 {
