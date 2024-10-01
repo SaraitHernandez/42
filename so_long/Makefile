@@ -6,7 +6,7 @@
 #    By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 13:43:09 by sarherna          #+#    #+#              #
-#    Updated: 2024/09/28 18:02:05 by sarherna         ###   ########.fr        #
+#    Updated: 2024/10/01 14:42:13 by sarherna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,10 @@ CFLAGS = -Wall -Wextra -Werror -O3
 #MLX_FLAGS = -I/usr/include -Imlx_linux
 #LIBS = -Lmlx_linux -lmlx_Linux -L/usr/lib -lXext -lX11 -lm -lz
 
-LIBFT_DIR = lib/libft
-FT_PRINTF_DIR = lib/ft_printf
-GNL_DIR = lib/get_next_line
-MAP_DIR = map
+LIBFT_DIR = utils/lib/libft
+FT_PRINTF_DIR = utils/lib/ft_printf
+GNL_DIR = utils/lib/get_next_line
+MAP_DIR = utils/map
 UTILS_DIR = utils
 OBJ_DIR = obj
 

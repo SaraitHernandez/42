@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_ft.c                                          :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 16:49:01 by sarherna          #+#    #+#             */
-/*   Updated: 2024/09/27 16:59:00 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/10/01 14:50:17 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 
-void free_doble_array(char **arr){
+void	free_doble_array(char **arr)
+{
 	int		i;
 
 	i = 0;
@@ -26,8 +27,14 @@ void free_doble_array(char **arr){
 
 void	free_map(t_map *map)
 {
-	for (int i = 0; i < map->height; i++)
+	int	i;
+
+	i = 0;
+	while (i < map->height)
+	{
 		free(map->map[i]);
+		i++;
+	}
 	free(map->map);
 	free(map);
 }
