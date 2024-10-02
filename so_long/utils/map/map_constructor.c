@@ -6,7 +6,7 @@
 /*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:52:28 by sarherna          #+#    #+#             */
-/*   Updated: 2024/10/01 14:42:51 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/10/02 11:09:12 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,6 @@ t_map	*create_map(char **map_data)
 	new_map->width = map_width(map_data);
 	new_map->height = map_height(map_data);
 	start_end_coodinates(new_map);
-	new_map->collectibles_count = 0;
+	new_map->collectibles = 0;
 	return (new_map);
 }

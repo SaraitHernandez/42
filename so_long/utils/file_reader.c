@@ -6,7 +6,7 @@
 /*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 16:46:25 by sarherna          #+#    #+#             */
-/*   Updated: 2024/10/01 14:48:34 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/10/02 11:23:02 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ t_map	*build_map(const char *filename)
 		ft_error("Error opening the file.", NULL);
 	map_data = load_map(fd, filename);
 	close(fd);
-	print_doble_array(map_data);
 	map = create_map(map_data);
 	return (map);
 }

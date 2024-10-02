@@ -6,9 +6,9 @@
 /*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:23:39 by sarherna          #+#    #+#             */
-/*   Updated: 2024/10/01 17:23:49 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/10/02 09:05:51 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "mlx_linux/mlx.h"
+# include "mlx/mlx.h"
 # include "utils/utils.h"

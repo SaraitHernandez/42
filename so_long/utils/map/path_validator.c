@@ -6,7 +6,7 @@
 /*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 16:40:26 by sarherna          #+#    #+#             */
-/*   Updated: 2024/10/01 17:18:11 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/10/02 09:53:07 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	has_valid_path(t_map *map)
 	data.exit_count = 0;
 	data.visited = create_visited_array(map);
 	flood_fill(&data, map->start_x, map->start_y);
-	free_doble_array(data.visited);
+	free_visited_array(data.visited, map->height);
 	return (data.collectibles == map->collectibles && data.exit_count > 0);
 }
 
