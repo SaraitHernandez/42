@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   file_reader.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sarherna <sarait.hernandez@novateva.com    +#+  +:+       +#+        */
+/*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 16:46:25 by sarherna          #+#    #+#             */
-/*   Updated: 2024/10/02 11:23:02 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/10/08 14:23:20 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,27 @@ int	count_rows(const char *filename)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		ft_error("Error opening the file.", NULL);
-	line = get_next_line(fd);
+	line = get_next_line(fd, 0);
 	while (line != NULL)
 	{
 		row_count++;
 		free(line);
-		line = get_next_line(fd);
+		line = get_next_line(fd, 0);
 	}
 	close(fd);
+	if (row_count <= 0)
+		ft_error("The file is empty.", NULL);
 	return (row_count);
+}
+
+char	**malloc_map_data(int file_rows)
+{
+	char	**map_data;
+
+	map_data = malloc(sizeof(char *) * (file_rows + 1));
+	if (!map_data)
+		ft_error("Allocation error.", NULL);
+	return (map_data);
 }
 
 char	**load_map(int fd, const char *filename)
@@ -41,13 +53,11 @@ char	**load_map(int fd, const char *filename)
 	int		file_rows;
 
 	file_rows = count_rows(filename);
-	map_data = malloc(sizeof(char *) * (file_rows + 1));
-	if (!map_data)
-		ft_error("Allocation error.", map_data);
+	map_data = malloc_map_data(file_rows);
 	row_count = 0;
 	while (row_count < file_rows)
 	{
-		line = get_next_line(fd);
+		line = get_next_line(fd, 0);
 		map_data[row_count] = ft_strdup(line);
 		free(line);
 		if (!map_data[row_count])
@@ -58,6 +68,7 @@ char	**load_map(int fd, const char *filename)
 		}
 		row_count++;
 	}
+	line = get_next_line(fd, 1);
 	map_data[row_count] = NULL;
 	return (map_data);
 }

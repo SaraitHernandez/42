@@ -6,7 +6,7 @@
 /*   By: sarherna <sarherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 16:14:14 by sarherna          #+#    #+#             */
-/*   Updated: 2024/07/12 20:12:12 by sarherna         ###   ########.fr       */
+/*   Updated: 2024/10/08 14:15:06 by sarherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@ static char	*read_file(int fd, char *leftover);
 static char	*extract_line(char **leftover);
 char		*buffer_join(char *leftover, char *buffer);
 
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, int clean)
 {
 	static char	*leftover;
 	char		*line;
 
+	if (clean == 1)
+		return (free(leftover), NULL);
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	leftover = read_file(fd, leftover);
